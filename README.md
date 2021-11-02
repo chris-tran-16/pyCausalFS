@@ -2,6 +2,8 @@
 
 ## Overview
 
+This is a fork of pyCausalFS that removes example files and data to allow for easier integration as a python module. This fork may have tweaks to make it easier to pip install.
+
 The pyCausalFS library provides access to a wide range of well-established and state-of-the-art causality-based feature selection approaches. The library is designed to facilitate the development of new algorithms in this research area and make it easier to compare new methods and existing ones available.  
   	
 The pyCausalFS library implements 30 representative causality-based feature selection methods. Specifically, it consists of 25 methods using conditional independence tests (16 single MB learning algorithms, 3 multiple MB learning algorithms, and 6 PC learning algorithms), and 5 score-based approaches. 
