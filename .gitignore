@@ -3,3 +3,8 @@ test.py
 *DS_Store*
 
 .idea/
+
+dist
+build
+*egg-info*
+UPDATELOG.md

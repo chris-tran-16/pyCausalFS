@@ -2,7 +2,10 @@
 
 ## Overview
 
-This is a fork of pyCausalFS that removes example files and data to allow for easier integration as a python module. This fork may have tweaks to make it easier to pip install.
+This is a fork of pyCausalFS that removes example files and data to allow for easier integration as a python module. The original repository can be found here: https://github.com/wt-hu/pyCausalFS. This fork may have tweaks to make it easier to pip install.
+You can install this via pypi:
+
+    pip install pyCausalFS
 
 The pyCausalFS library provides access to a wide range of well-established and state-of-the-art causality-based feature selection approaches. The library is designed to facilitate the development of new algorithms in this research area and make it easier to compare new methods and existing ones available.  
   	
