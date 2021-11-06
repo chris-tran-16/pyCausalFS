@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="pyCausalFS2",
+    name="pyCausalFS",
     version="0.1",
     author="Christopher Tran",
     author_email="ctran29@uic.edu",
