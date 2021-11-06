@@ -6,7 +6,7 @@
  """
 
 import numpy as np
-from pyCausalFS.CBD.MBs import MMMB
+from pyCausalFS.CBD.MBs.MMMB.MMMB import MMMB
 from pyCausalFS.LSL.MBs.common.condition_independence_test import cond_indep_test
 from pyCausalFS.LSL.MBs.common.Meek import meek
 from pyCausalFS.CBD.MBs.common.subsets import subsets
