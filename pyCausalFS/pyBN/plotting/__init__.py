@@ -1,1 +1,1 @@
-from pyBN.plotting.plot import *
+from pyCausalFS.pyBN.plotting.plot import *

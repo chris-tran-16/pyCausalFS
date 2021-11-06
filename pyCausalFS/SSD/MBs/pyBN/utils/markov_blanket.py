@@ -14,7 +14,7 @@ for Optimal Feature Selection"
 from __future__ import division
 from copy import copy
 import itertools
-from pyCausalFS.SSD.MBs.pyBN import mi_test
+from pyCausalFS.SSD.MBs.pyBN.utils.independence_tests import mi_test
 
 
 __author__ = """Nicholas Cullen <ncullen.th@dartmouth.edu>"""

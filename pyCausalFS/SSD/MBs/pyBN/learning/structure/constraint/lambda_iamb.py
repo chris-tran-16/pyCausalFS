@@ -8,7 +8,7 @@ Blanket Discovery"
 """
 
 import numpy as np
-from pyCausalFS.SSD.MBs.pyBN import are_independent, entropy
+from pyCausalFS.SSD.MBs.pyBN.utils.independence_tests import are_independent, entropy
 
 def lambda_iamb(data, L=1.5, alpha=0.05, feature_selection=None):
 	"""

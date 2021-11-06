@@ -1,4 +1,4 @@
-from pyCausalFS.pyBN.classes import Factor
+from pyCausalFS.pyBN.classes.factor import Factor
 
 import numpy as np
 

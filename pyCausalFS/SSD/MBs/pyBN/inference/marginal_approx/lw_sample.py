@@ -1,6 +1,6 @@
 __author__ = """N. Cullen <ncullen.th@dartmouth.edu>"""
 
-from pyCausalFS.pyBN.classes import Factor
+from pyCausalFS.pyBN.classes.factor import Factor
 
 import numpy as np
 

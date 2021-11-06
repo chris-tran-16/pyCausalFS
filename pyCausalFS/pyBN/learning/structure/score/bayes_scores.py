@@ -19,7 +19,7 @@ from __future__ import division
 
 import numpy as np
 from scipy.special import gamma
-from pyBN.learning.parameter.mle import mle_fast
+from pyCausalFS.pyBN.learning.parameter.mle import mle_fast
 
 
 def BDe(bn, data, ess=1, ed=None): 

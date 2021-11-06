@@ -19,6 +19,9 @@ such that maximum (or minimum) closeness is achieved.
 
 """
 
+from pyCausalFS.pyBN.utils.structure_distance import *
+from pyCausalFS.pyBN.utils.parameter_distance import *
+
 def hybrid_distance(x,y, alpha, s='hamming', p='euclidean'):
 	structure_score = hamming(x,y)
 	parameter_score = euclidean(x,y)

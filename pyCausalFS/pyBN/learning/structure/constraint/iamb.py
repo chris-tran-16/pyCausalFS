@@ -46,10 +46,10 @@ Markov Blanket Discovery"
 __author__ = """Nicholas Cullen <ncullen.th@dartmouth.edu>"""
 
 import numpy as np
-from pyCausalFS.pyBN.utils import are_independent, mi_test
+from pyCausalFS.pyBN.utils.independence_tests import are_independent, mi_test
 from pyCausalFS.pyBN.utils.orient_edges import orient_edges_gs2
-from pyCausalFS.pyBN.utils import resolve_markov_blanket
-from pyCausalFS.pyBN.classes import BayesNet
+from pyCausalFS.pyBN.utils.markov_blanket import resolve_markov_blanket
+from pyCausalFS.pyBN.classes.bayesnet import BayesNet
 
 
 def iamb(data, alpha=0.05, feature_selection=None, debug=False):

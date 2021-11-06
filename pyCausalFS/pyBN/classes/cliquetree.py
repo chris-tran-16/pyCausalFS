@@ -36,7 +36,8 @@ __author__ = """Nicholas Cullen <ncullen.th@dartmouth.edu>"""
 import networkx as nx
 from copy import copy
 
-from pyCausalFS.pyBN.classes import Factorization
+# noinspection PyUnresolvedReferences
+from pyCausalFS.pyBN.classes.factor import Factorization
 
 
 class CliqueTree(object):
@@ -131,6 +132,7 @@ class CliqueTree(object):
         
         """
         ### MORALIZE GRAPH & MAKE IT CHORDAL ###
+        # noinspection PyUnresolvedReferences
         chordal_G = make_chordal(self.bn) # must return a networkx object
         V = chordal_G.nodes()
 
@@ -147,6 +149,7 @@ class CliqueTree(object):
                 if i!=j:
                     intersect_cardinality = len(C[i].sepset(C[j]))
                     weighted_edge_dict[i][j] = -1*intersect_cardinality
+        # noinspection PyUnresolvedReferences
         mst_G = mst(weighted_edge_dict)
         ### SET V,E,C ###
         self.E = mst_G # dictionary

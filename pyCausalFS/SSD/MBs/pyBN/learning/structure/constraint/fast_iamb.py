@@ -36,7 +36,7 @@ Markov Blanket Discovery"
 from __future__ import division
 
 import numpy as np
-from pyCausalFS.SSD.MBs.pyBN import are_independent, mi_test
+from pyCausalFS.SSD.MBs.pyBN.utils.independence_tests import are_independent, mi_test
 from pyCausalFS.SSD.MBs.pyBN.utils.data import unique_bins, replace_strings
 
 def fast_iamb(data, k=5, alpha=0.05, feature_selection=None, debug=False):

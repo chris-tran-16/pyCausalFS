@@ -4,7 +4,7 @@ Factorization
 Class
 *************
 """
-from pyCausalFS.pyBN.classes import Factor
+from pyCausalFS.pyBN.classes.factor import Factor
 
 from collections import OrderedDict
 from copy import deepcopy

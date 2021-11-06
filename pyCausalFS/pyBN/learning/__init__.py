@@ -1,2 +1,2 @@
-from pyBN.learning.parameter import *
-from pyBN.learning.structure import *
+from pyCausalFS.pyBN.learning.parameter import *
+from pyCausalFS.pyBN.learning.structure import *

@@ -12,8 +12,8 @@ connected graph. This is the Chow-Liu tree.
 
 __author__ = """Nicholas Cullen <ncullen.th@dartmouth.edu>"""
 
-from pyCausalFS.SSD.MBs.pyBN import mi_test
-from pyCausalFS.SSD.MBs.pyBN import BayesNet
+from pyCausalFS.SSD.MBs.pyBN.utils.independence_tests import mi_test
+from pyCausalFS.SSD.MBs.pyBN.classes.bayesnet import BayesNet
 import operator
 import numpy as np
 

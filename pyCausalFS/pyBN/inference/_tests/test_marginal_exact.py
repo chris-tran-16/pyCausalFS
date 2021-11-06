@@ -7,14 +7,12 @@ Marginal Exact
 """
 __author__ = """Nicholas Cullen <ncullen.th@dartmouth.edu>"""
 
-import unittest
 import os
+import unittest
 from os.path import dirname
-import numpy as np
 
-from pyBN.readwrite.read import read_bn
 from pyBN.inference.marginal_exact import marginal_ve_e
-
+from pyBN.readwrite.read import read_bn
 
 
 class MarginalExactTestCase(unittest.TestCase):

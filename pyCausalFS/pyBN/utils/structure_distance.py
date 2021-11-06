@@ -47,7 +47,6 @@ References
 
 __author__ = """Nicholas Cullen <ncullen.th@dartmouth.edu>"""
 
-import numpy as np
 
 def missing_edges(x,y):
 	"""

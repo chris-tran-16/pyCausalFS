@@ -35,11 +35,11 @@ NIPS 2000.
 
 __author__ = """Nicholas Cullen <ncullen.th@dartmouth.edu>"""
 
-from pyCausalFS.pyBN.utils import mi_test
+from pyCausalFS.pyBN.utils.independence_tests import mi_test
 from pyCausalFS.pyBN.utils.orient_edges import orient_edges_MB
-from pyCausalFS.pyBN.utils import resolve_markov_blanket
-from pyCausalFS.pyBN.classes import BayesNet
-from pyCausalFS.pyBN.utils import replace_strings
+from pyCausalFS.pyBN.utils.markov_blanket import resolve_markov_blanket
+from pyCausalFS.pyBN.classes.bayesnet import BayesNet
+from pyCausalFS.pyBN.utils.data import replace_strings
 
 from copy import copy
 

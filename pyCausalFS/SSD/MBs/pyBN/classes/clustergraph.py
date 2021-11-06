@@ -24,7 +24,7 @@ __author__ = """Nicholas Cullen <ncullen.th@dartmouth.edu>"""
 import numpy as np
 import networkx as nx
 
-from pyCausalFS.SSD.MBs.pyBN import Clique
+from pyCausalFS.SSD.MBs.pyBN.classes.cliquetree import Clique
 
 class ClusterGraph(object):
     """

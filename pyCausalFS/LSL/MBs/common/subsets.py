@@ -1,5 +1,5 @@
-import itertools
-from itertools import combinations, chain
+from itertools import combinations
+
 
 def subsets(nbrs, k):
     return set(combinations(nbrs, k))

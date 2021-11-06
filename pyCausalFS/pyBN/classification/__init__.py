@@ -1,2 +1,2 @@
-from pyBN.classification.classification import *
-from pyBN.classification.feature_selection import *
+from pyCausalFS.pyBN.classification.classification import *
+from pyCausalFS.pyBN.classification.feature_selection import *

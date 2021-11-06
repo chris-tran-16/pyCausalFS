@@ -1,2 +1,2 @@
-from pyBN.learning.parameter.bayes import *
-from pyBN.learning.parameter.mle import *
+from pyCausalFS.pyBN.learning.parameter.bayes import *
+from pyCausalFS.pyBN.learning.parameter.mle import *

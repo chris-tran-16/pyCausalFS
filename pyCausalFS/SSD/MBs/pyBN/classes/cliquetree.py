@@ -35,10 +35,7 @@ __author__ = """Nicholas Cullen <ncullen.th@dartmouth.edu>"""
 
 import networkx as nx
 
-from pyCausalFS.pyBN.classes import Factorization
-
-from pyCausalFS.SSD.MBs.pyBN import *
-
+from pyCausalFS.pyBN.classes.factorization import Factorization
 
 
 class CliqueTree(object):

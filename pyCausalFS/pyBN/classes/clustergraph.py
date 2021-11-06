@@ -26,6 +26,7 @@ import networkx as nx
 
 from pyCausalFS.pyBN.classes.cliquetree import Clique
 
+
 class ClusterGraph(object):
     """
     ClusterGraph Class

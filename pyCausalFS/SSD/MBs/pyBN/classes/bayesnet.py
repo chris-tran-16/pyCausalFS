@@ -39,8 +39,8 @@ __author__ = """Nicholas Cullen <ncullen.th@dartmouth.edu>"""
 from copy import deepcopy
 
 import numpy as np
-from pyCausalFS.SSD.MBs.pyBN import are_class_equivalent
-from pyCausalFS.SSD.MBs.pyBN import topsort
+from pyCausalFS.SSD.MBs.pyBN.utils.class_equivalence import are_class_equivalent
+from pyCausalFS.SSD.MBs.pyBN.utils.graph import topsort
 
 class BayesNet(object):
     """

@@ -1,2 +1,2 @@
-from pyBN.io.read import *
-from pyBN.io.write import *
+from pyCausalFS.pyBN.io.read import *
+from pyCausalFS.pyBN.io.write import *

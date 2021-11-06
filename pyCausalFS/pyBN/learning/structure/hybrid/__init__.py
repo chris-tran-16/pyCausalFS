@@ -1,1 +1,1 @@
-from pyBN.learning.structure.hybrid.mmpc import *
+from pyCausalFS.pyBN.learning.structure.hybrid.mmpc import *

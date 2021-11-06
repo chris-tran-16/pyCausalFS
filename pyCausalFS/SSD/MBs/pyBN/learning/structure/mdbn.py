@@ -48,7 +48,7 @@ __author__ = """Nicholas Cullen <ncullen.th@dartmouth.edu>"""
 
 from pyCausalFS.SSD.MBs.pyBN.learning.structure.score.random_restarts import hc_rr
 
-from pyCausalFS.SSD.MBs.pyBN import BayesNet
+from pyCausalFS.SSD.MBs.pyBN.classes.bayesnet import BayesNet
 
 
 def bridge(c_bn, f_bn, data):

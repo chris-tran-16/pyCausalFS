@@ -7,13 +7,12 @@ Map Exact
 """
 __author__ = """Nicholas Cullen <ncullen.th@dartmouth.edu>"""
 
-import unittest
 import os
+import unittest
 from os.path import dirname
-import numpy as np
 
 from pyBN.readwrite.read import read_bn
-from pyBN.inference.map_exact import map_ve_e
+
 
 class MapExactTestCase(unittest.TestCase):
 

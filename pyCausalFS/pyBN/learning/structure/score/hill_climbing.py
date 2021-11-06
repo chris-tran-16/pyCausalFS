@@ -30,11 +30,11 @@ Strategies to improve Greedy Hill-Climbing:
 import numpy as np
 #from heapq import *
 
-from pyCausalFS.pyBN.classes import BayesNet
-from pyBN.learning.parameter.mle import mle_estimator
-from pyBN.learning.structure.score.info_scores import info_score
-from pyCausalFS.pyBN.utils import mutual_information
-from pyCausalFS.pyBN.utils import would_cause_cycle
+from pyCausalFS.pyBN.classes.bayesnet import BayesNet
+from pyCausalFS.pyBN.learning.parameter.mle import mle_estimator
+from pyCausalFS.pyBN.learning.structure.score.info_scores import info_score
+from pyCausalFS.pyBN.utils.independence_tests import mutual_information
+from pyCausalFS.pyBN.utils.graph import would_cause_cycle
 
 
 def hc(data, metric='AIC', max_iter=100, debug=False, restriction=None):

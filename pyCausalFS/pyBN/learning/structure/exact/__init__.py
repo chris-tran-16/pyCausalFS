@@ -1,1 +1,1 @@
-from pyBN.learning.structure.exact.gobnilp import *
+from pyCausalFS.pyBN.learning.structure.exact.gobnilp import *

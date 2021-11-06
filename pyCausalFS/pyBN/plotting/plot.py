@@ -9,15 +9,15 @@ the graphviz framework.
 
 __author__ = """Nicholas Cullen <ncullen.th@dartmouth.edu>"""
 
-import networkx as nx
-from graphviz import dot
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-from networkx.drawing.nx_agraph import write_dot, graphviz_layout
 import subprocess
-import sys
+
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
+import networkx as nx
 from PIL import Image
-		
+from networkx.drawing.nx_agraph import write_dot, graphviz_layout
+
+
 def plot(bn, save=False):
 	plot_gv(bn, save=save)
 

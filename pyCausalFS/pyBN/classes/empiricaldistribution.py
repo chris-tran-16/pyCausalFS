@@ -26,7 +26,6 @@ doi=10.1.1.127.7570&rep=rep1&type=pdf
 from __future__ import division
 
 import numpy as np
-from copy import copy, deepcopy
 
 
 class EmpiricalDistribution(object):

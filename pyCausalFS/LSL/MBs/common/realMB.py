@@ -6,7 +6,8 @@ desc:
 """
 
 import numpy as np
-import pandas as pd
+
+
 def realMB(kVar):
     graph = np.zeros((kVar,kVar))
     parents = [[] for i in range(kVar)]

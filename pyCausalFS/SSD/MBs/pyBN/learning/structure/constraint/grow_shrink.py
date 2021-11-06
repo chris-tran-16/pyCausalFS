@@ -35,10 +35,10 @@ NIPS 2000.
 
 __author__ = """Nicholas Cullen <ncullen.th@dartmouth.edu>"""
 
-from pyCausalFS.SSD.MBs.pyBN import mi_test
-from pyCausalFS.SSD.MBs.pyBN import orient_edges_MB
-from pyCausalFS.SSD.MBs.pyBN import resolve_markov_blanket
-from pyCausalFS.SSD.MBs.pyBN import BayesNet
+from pyCausalFS.SSD.MBs.pyBN.utils.independence_tests import mi_test
+from pyCausalFS.SSD.MBs.pyBN.utils.orient_edges import orient_edges_MB
+from pyCausalFS.SSD.MBs.pyBN.utils.markov_blanket import resolve_markov_blanket
+from pyCausalFS.SSD.MBs.pyBN.classes.bayesnet import BayesNet
 from pyCausalFS.SSD.MBs.pyBN.utils.data import replace_strings
 
 from copy import copy
