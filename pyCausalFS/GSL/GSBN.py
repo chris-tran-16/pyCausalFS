@@ -6,15 +6,16 @@
  """
 import numpy as np
 from pyCausalFS.CBD.MBs.common.subsets import subsets
-from pyCausalFS.CBD.MBs import meek
+from pyCausalFS.CBD.MBs.common.Meek import meek
 from pyCausalFS.CBD.MBs.common.condition_independence_test import cond_indep_test
+
 
 def GSMB(data, target, alaph, is_discrete):
     number, kVar = np.shape(data)
     CMB = []
     ci_number = 0
     circulateFlag = True
-    S_variables = [i for i in range(kVar) if i !=target]
+    S_variables = [i for i in range(kVar) if i != target]
 
     """grow phase"""
     # print("grow phase")
@@ -39,8 +40,8 @@ def GSMB(data, target, alaph, is_discrete):
         for x in CMB_temp:
             subsets_CMB = [i for i in CMB if i != x]
             ci_number += 1
-            pval_sp, dep_sp= cond_indep_test(data, target, x, subsets_CMB, is_discrete)
-            if pval_sp > alaph :
+            pval_sp, dep_sp = cond_indep_test(data, target, x, subsets_CMB, is_discrete)
+            if pval_sp > alaph:
                 # print("CMB remove is: "+ str(x))
                 CMB.remove(x)
                 circulateFlag = True
@@ -119,7 +120,7 @@ def GSBN(data, alpha, is_discrete):
         for y in all_neighbor[x]:
 
             PP[y, x] = -1
-            nz_vars = [i for i in all_neighbor[x] if i != y and i not in all_neighbor[y] ]
+            nz_vars = [i for i in all_neighbor[x] if i != y and i not in all_neighbor[y]]
             for z in nz_vars:
 
                 vs_vars = set(all_neighbor[y]).union(all_neighbor[z])
@@ -155,8 +156,6 @@ def GSBN(data, alpha, is_discrete):
     [DAG, pdag, G] = meek(DAG, pdag, G, kvar)
 
     return pdag
-
-
 
 # import warnings
 # warnings.filterwarnings('ignore')

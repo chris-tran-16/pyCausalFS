@@ -6,7 +6,7 @@
  """
 
 from pyCausalFS.GSL.MMHC.hc import hc
-from pyCausalFS.CBD.MBs import MMPC
+from pyCausalFS.CBD.MBs.MMMB.MMPC import MMPC
 import numpy as np
 
 # symmetry check for pc set
