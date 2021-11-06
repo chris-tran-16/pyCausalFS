@@ -6,7 +6,7 @@
  """
 
 import numpy as np
-from pyCausalFS.CBD.MBs import MMPC
+from pyCausalFS.CBD.MBs.MMMB.MMPC import MMPC
 from pyCausalFS.LSL.MBs.common.Meek import Meek
 
 

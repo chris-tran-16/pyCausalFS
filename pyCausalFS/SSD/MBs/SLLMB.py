@@ -5,20 +5,20 @@
  @File    : SLL.py
  """
 
-from SSD.MBs.common.optimalnetwork import optimal_network
+from pyCausalFS.SSD.MBs.common.optimalnetwork import optimal_network
 import numpy as np
 
 
-
-def find_potential_neighbors(data,target):
+def find_potential_neighbors(data, target):
     number, kVar = np.shape(data)
     O_set = [i for i in range(kVar) if i != target]
     ht_set = []
     for v in O_set:
         Z = list(set(ht_set).union(set([target, v])))
         A = optimal_network(Z, data)
-        ht_set =[i for i in range(kVar) if i != target and A[i, target] == 1 or A[target, i] == 1]
+        ht_set = [i for i in range(kVar) if i != target and A[i, target] == 1 or A[target, i] == 1]
     return ht_set
+
 
 def find_neighbors(data, target):
     ht_set = find_potential_neighbors(data, target)
@@ -29,6 +29,7 @@ def find_neighbors(data, target):
             ht_set.remove(v)
 
     return ht_set
+
 
 def find_potential_spouses(data, target, ht_set):
     _, kVar = np.shape(data)
@@ -45,9 +46,10 @@ def find_potential_spouses(data, target, ht_set):
 
     return st_set
 
+
 def find_spouses(data, target, ht_set, hv_set):
     _, kVar = np.shape(data)
-    st_set = find_potential_spouses(data, target,ht_set)
+    st_set = find_potential_spouses(data, target, ht_set)
     vari_set = [i for i in range(kVar) if i != target and i not in ht_set]
     for v in vari_set:
         sv_set = find_potential_spouses(data, v, hv_set)
@@ -56,12 +58,13 @@ def find_spouses(data, target, ht_set, hv_set):
 
     return st_set
 
-def SLL(data,target):
+
+def SLL(data, target):
     pc_t = find_neighbors(data, target)
     # print("pc_t is: " + str(pc_t))
     hv_set = []
     for x in pc_t:
-        h_x = find_neighbors(data,x)
+        h_x = find_neighbors(data, x)
         pc_x = find_potential_spouses(data, x, h_x)
         hv_set = list(set(hv_set).union(set(pc_x)))
     sp_t = find_spouses(data, target, pc_t, hv_set)
@@ -69,21 +72,8 @@ def SLL(data,target):
 
     return pc_t, MB
 
-
 # import pandas as pd
 # data = pd.read_csv("C:/pythonProject/BN_PC_algorithm/Alarm_data/Alarm1_s500_v1.csv")
 # target = 5
 # res = SLL(data, target)
 # print("res is: " + str(res))
-
-
-
-
-
-
-
-
-
-
-
-

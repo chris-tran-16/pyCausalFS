@@ -5,14 +5,16 @@
  @File    : S^2TMB.py
  """
 import numpy as np
-from SSD.MBs.common.optimalnetwork import optimal_network
+from pyCausalFS.SSD.MBs.common.optimalnetwork import optimal_network
+
+
 def S2TMB(data, target):
     # step 1:find the PC set
     _, kVar = np.shape(data)
     pc_t = []
     o_set = [i for i in range(kVar) if i != target]
     for x in o_set:
-        Z = set([target,x]).union(pc_t)
+        Z = set([target, x]).union(pc_t)
         DAG = optimal_network(Z, data)
         pc_t = [i for i in range(kVar) if DAG[target, i] == 1 or DAG[i, target] == 1]
 
@@ -23,11 +25,11 @@ def S2TMB(data, target):
         Z = set([target, x]).union(set(pc_t)).union(set(spouses_t))
         DAG = optimal_network(Z, data)
         pc_t = [i for i in range(kVar) if DAG[target, i] == 1 or DAG[i, target] == 1]
-        spouses_t = [i for i in range(kVar) for j in range(kVar) if i != target and DAG[target, j] == 1 and DAG[i, j] == 1]
+        spouses_t = [i for i in range(kVar) for j in range(kVar) if
+                     i != target and DAG[target, j] == 1 and DAG[i, j] == 1]
 
     MB = list(set(pc_t).union(set(spouses_t)))
     return pc_t, MB
-
 
 
 def S2TMB_p(data, target):
@@ -36,7 +38,7 @@ def S2TMB_p(data, target):
     pc_t = []
     o_set = [i for i in range(kVar) if i != target]
     for x in o_set:
-        Z = set([target,x]).union(pc_t)
+        Z = set([target, x]).union(pc_t)
         DAG = optimal_network(Z, data)
         pc_t = [i for i in range(kVar) if DAG[target, i] == 1 or DAG[i, target] == 1]
 
@@ -57,7 +59,8 @@ def S2TMB_p(data, target):
         Z = set([target, x]).union(pc_t).union(spouses_t)
         DAG = optimal_network(Z, data)
         pc_t = [i for i in range(kVar) if DAG[target, i] == 1 or DAG[i, target] == 1]
-        spouses_t = [i for i in range(kVar) for j in range(kVar) if i != target and DAG[target, j] == 1 and DAG[i, j] == 1]
+        spouses_t = [i for i in range(kVar) for j in range(kVar) if
+                     i != target and DAG[target, j] == 1 and DAG[i, j] == 1]
 
     MB = list(set(pc_t).union(set(spouses_t)))
     return pc_t, MB
@@ -68,4 +71,3 @@ def S2TMB_p(data, target):
 # res = S2TMB_p(data, target)
 # print("res is: " + str(res))
 #
-
