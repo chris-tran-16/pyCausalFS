@@ -58,6 +58,8 @@ def MMPC(data, target, alpha, is_discrete):
 
             # if x chose min dep is 0, it never append to CPC and should not test from now on,
             if x_dep_min == 0:
+                if sepset_temp is None:
+                    sepset_temp = ()
                 deoZeroSet.append(x)
                 sepset[x] = [j for j in sepset_temp]
 

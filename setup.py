@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pyCausalFS",
-    version="0.22",
+    version="0.23",
     author="Christopher Tran",
     author_email="ctran29@uic.edu",
     description="Fork of pyCausalFS - implementation of local structure learning algorithms",
